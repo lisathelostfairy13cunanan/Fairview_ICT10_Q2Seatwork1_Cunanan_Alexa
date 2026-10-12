@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadet Corps Verification</title>
+    <link rel="stylesheet" href="https://pyscript.net/releases/2026.7.3/core.css">
+    <script type="module" src="https://pyscript.net/releases/2026.7.3/core.js"></script>
+
+    <style>
+        body {
+            background-image: url("https://i.pinimg.com/1200x/06/e3/d3/06e3d30211270893039b3b8d8aa7b851.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+
+        .container {
+            background-color: #f3efdf;
+            max-width: 500px;
+            margin: 30px auto;
+            padding: 30px;
+            border-top: 8px solid #8e342b;
+            border-radius: 8px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #26382c;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            color: #8e342b;
+            letter-spacing: 3px;
+        }
+
+        p {
+            color: #555;
+            line-height: 1.5;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #26382c;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+            border: 1px solid #aaa;
+            border-radius: 4px;
+        }
+
+        input:focus {
+            outline: 2px solid #78815b;
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            margin-top: 20px;
+            background-color: #8e342b;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #682820;
+        }
+
+        #result-box {
+            margin-top: 20px;
+            padding: 12px;
+            background-color: #e2dfd0;
+            border-left: 4px solid #78815b;
+            color: #26382c;
+            overflow-wrap: anywhere;
+        }
+
+        footer {
+            display: flex;
+            justify-content: center; 
+            align-items: center;    
+            gap: 20px;   
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h3>CADET CORPS</h3>
+        <h1>Candidate Verification</h1>
+
+        <p>
+            Welcome, cadet! Enter your name to check
+            if you are on the Cadet Corps member list.
+        </p>
+
+        <form onsubmit="return false;">
+
+            <label for="firstname">First Name</label>
+            <input
+                type="text"
+                id="firstname"
+                placeholder="Enter first name"
+            >
+
+            <label for="lastname">Last Name</label>
+            <input
+                type="text"
+                id="lastname"
+                placeholder="Enter last name"
+            >
+
+            <button type="button" py-click="verify">
+                Verify Candidate
+            </button>
+
+        </form>
+
+        <div id="result-box">
+            Your result will appear here.
+        </div>
+
+    </div>
+
+    <footer>
+        <p style="color: #eee8d5;">
+        HUMANITY • COURAGE • UNITY
+        <p style="color: #eee8d5;">
+        SHINZOU WO SASAGEYO
+        </p>
+    </footer>
+
+    <script type="py" src="./main.py"></script>
+
+</body>
+</html>
